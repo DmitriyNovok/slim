@@ -1,0 +1,6 @@
+/.idea/*
+/config/*
+/vendor/*
+/var/cache/*
+!/var/cache/.gitkeep
+.DS_Store
