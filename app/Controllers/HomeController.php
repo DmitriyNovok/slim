@@ -13,7 +13,7 @@ class HomeController
         private ContainerInterface $container
     ){}
 
-    public function home(Request $request, Response $response, array $args)
+    public function home(Request $request, Response $response, array $args): Response
     {
         /**
          * Create JSON response
@@ -25,7 +25,7 @@ class HomeController
         return $response;
     }
 
-    public function hello(Request $request, Response $response, array $args)
+    public function hello(Request $request, Response $response, array $args): Response
     {
 
         $response->getBody()->write(json_encode(['world' => 'hello']));
@@ -35,7 +35,7 @@ class HomeController
         return $response;
     }
 
-    public function view(Request $request, Response $response, array $args)
+    public function view(Request $request, Response $response, array $args): Response
     {
         $response->getBody()->write(json_encode(['hello' => $args['name']]));
         return $response->withHeader('Content-Type', 'application/json');
@@ -44,7 +44,7 @@ class HomeController
         return $response;
     }
 
-    public function sayWorld(Request $request, Response $response, array $args)
+    public function sayWorld(Request $request, Response $response, array $args): Response
     {
         $response->getBody()->write(json_encode(['world_say' => $args['say']]));
         return $response->withHeader('Content-Type', 'application/json');
