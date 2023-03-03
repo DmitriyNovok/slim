@@ -2,7 +2,6 @@ composer
 composer.phar
 composer.lock
 /.idea/*
-/config/*
 /vendor/*
 /var/cache/*
 !/var/cache/.gitkeep
